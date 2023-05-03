@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Adivinhe qual é o Numero</title>
+  </head>
+  <body onload="init()">
+    <main>
+      <div id="welcomeScreen">
+        <h2>Adivinhe qual é o Numero Oculto <br />1 - 100</h2>
+      </div>
+
+      <div id="gameArea">
+        <section>
+          <h3 id="textOutput">Qual Opnião é:</h3>
+          <input type="number" id="inputBox" min="1" max="100"/>
+        </section>
+        <section class="stats">
+          <div class="info">
+            <p>Numero de Tentativas:</p>
+            <span id="attempts">0</span>
+          </div>
+          <div class="info">
+            <p>Seus Palpites:</p>
+            <span id="guesses">0</span>
+          </div>
+        </section>
+        <button id="newGameButton">Jogar Novamente</button>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

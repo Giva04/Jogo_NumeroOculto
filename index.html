@@ -15,8 +15,9 @@
 
       <div id="gameArea">
         <section>
-          <h3 id="textOutput">Qual Opnião é:</h3>
-          <input type="number" id="inputBox" min="1" max="100"/>
+          <h3 id="textOutput">Sua Opnião é:</h3>
+          <input type="number" id="inputBox" min="1" max="100" 
+          onchange="compareNumbers()"/>
         </section>
         <section class="stats">
           <div class="info">
@@ -25,7 +26,7 @@
           </div>
           <div class="info">
             <p>Seus Palpites:</p>
-            <span id="guesses">0</span>
+            <span id="guesses"></span>
           </div>
         </section>
         <button id="newGameButton">Jogar Novamente</button>

@@ -19,4 +19,17 @@ function compareNumbers() {
 
 // para fazer paracer o numero digitado no palpite
     document.getElementById('guesses').innerHTML = userNumbers
+
+// CRIANDO A LOGICA PARA O COMPUTADOR ESCOLHER NUMERO, E DAR DICAS DE APROXIMAÇAO DO NUMERO ESCOLHIDO PELO COMUTADOR
+    if(userNumber > computerNumber) {
+        // logica que da dida de aproximação do numero
+     document.getElementById('textOutput').innerHTML = 'Seu Numero é maior'
+    }
+    else if(userNumber < computerNumber) {        
+     document.getElementById('textOutput').innerHTML = 'Seu Numero é menor'
+    }
+    else {
+        document.getElementById('textOutput').innerHTML = 'Você acertou!!!!!!'
+    }
+
 }

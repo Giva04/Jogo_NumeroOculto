@@ -24,9 +24,12 @@ function compareNumbers() {
     if(userNumber > computerNumber) {
         // logica que da dida de aproximação do numero
      document.getElementById('textOutput').innerHTML = 'Seu Numero é maior'
+       // logica para apagar no numero  digitado quando for o errado
+     document.getElementById('inputBox').value = ''
     }
     else if(userNumber < computerNumber) {        
      document.getElementById('textOutput').innerHTML = 'Seu Numero é menor'
+     document.getElementById('inputBox').value = ''
     }
     else {
         document.getElementById('textOutput').innerHTML = 'Você acertou!!!!!!'

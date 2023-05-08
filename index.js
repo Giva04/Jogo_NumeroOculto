@@ -4,6 +4,9 @@ let computerNumber
 //VARIAVEL QUE ARMEZA NA ARRAY O NUMERO DIGITADO 
 let userNumbers = []
 
+// VARIAVEL QUE CONTABILIZA O NUMERO DE TENTATICAS
+let attempts = 0
+
 // FUNÇÃO QUE INICIALIZA  E REINICIALIZA O JOGO
 
 function init( ) {
@@ -24,15 +27,28 @@ function compareNumbers() {
     if(userNumber > computerNumber) {
         // logica que da dida de aproximação do numero
      document.getElementById('textOutput').innerHTML = 'Seu Numero é maior'
+     
        // logica para apagar no numero  digitado quando for o errado
      document.getElementById('inputBox').value = ''
+
+     // logica par contabilizar as tentativas
+     attempts ++
+     document.getElementById('attempts').innerHTML = attempts
+
     }
     else if(userNumber < computerNumber) {        
      document.getElementById('textOutput').innerHTML = 'Seu Numero é menor'
+
      document.getElementById('inputBox').value = ''
+
+     attempts ++
+     document.getElementById('attempts').innerHTML = attempts
     }
     else {
         document.getElementById('textOutput').innerHTML = 'Você acertou!!!!!!'
+
+        attempts ++
+        document.getElementById('attempts').innerHTML = attempts
     }
 
 }

@@ -11,6 +11,12 @@ let attempts = 0
 let maxguesses = 10 
 
 
+// FUNÇÃO PARA VALIDAR O BOTÃO NOVO JOGO
+function newGame() {
+    window.location.reload()
+}
+
+
 // FUNÇÃO QUE INICIALIZA  E REINICIALIZA O JOGO
 
 function init( ) {
@@ -55,11 +61,15 @@ function compareNumbers() {
 
         attempts ++
         document.getElementById('attempts').innerHTML = attempts
+        // logica para não receber mais numeros acertar o numero Oculto
+        document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
     }
 
   }
         // LOGICA PARA INFORMAR QUE VOCÊ PERDEU E REVELAR O NUMERO OCULTO
     else {
         document.getElementById('textOutput').innerHTML ='Ahhh!!! Você Perdeu. O número Oculto era:' + computerNumber
+        // logica para não receber mais numeros apos todas as tentativas
+        document.getElementById('inputBox').setAttribute('Readonly', 'Readonly')
     }
 }

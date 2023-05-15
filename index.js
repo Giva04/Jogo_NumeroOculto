@@ -23,13 +23,18 @@ function init( ) {
 }
 // FUNÇÃO QUE AMAZENA O NUMERO DIGITADO NO INPUT na array
 function compareNumbers() {
+    document.getElementById("textOutput").classList.remove("danger__info");
+
    const userNumber = Number(document.getElementById('inputBox').value)
 //    para enviar o numero para array
    userNumbers.push(' ' + userNumber)
+
 // alerta de numero invalido  
-   if(userNumber > 100 || userNumber <= 0 ){
-        alert('Numero invalido');
-        return
+   if (userNumber > 100 || userNumber <= 0 ){
+        document.getElementById("textOutput").innerHTML = "Digite um numero valido ";
+        document.getElementById("textOutput").classList.add("danger__info");
+        
+        return;
    } 
 
 // para fazer paracer o numero digitado no palpite
